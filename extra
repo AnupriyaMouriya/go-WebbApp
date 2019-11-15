@@ -1,0 +1,57 @@
+/*
+type People struct {
+	gorm.Model
+	//IdPerson int `gorm:"PRIMARY_KEY"`
+	Name string `gorm:"Column:user_name;size:255;NOT NULL"`
+	Email string `gorm:"Column:user_email;type:varchar(100);UNIQUE;NOT NULL"`
+	Subscription []Article `gorm:"many2many:subscription_table; association_foreignkey:ArticleId; foreignkey:PeopleId"`
+}
+*/
+
+//Db, err := gorm.Open("postgres", "host=localhost port=5432 user=postgres dbname=gorm password=hellopizza")
+
+
+/*	Host:="localhost"
+	Port:="5432"
+	User:="postgres"
+	DB:="final"
+	Password:="password"
+
+	Host:=os.Getenv("HOST")
+	Port:=os.Getenv("PORT")
+	User:=os.Getenv("USER")
+	DB:=os.Getenv("DBNAME")
+	Password:=os.Getenv("PASSWORD")
+*/
+
+
+/*
+func AllUser(w http.ResponseWriter, r *http.Request){
+	db:=connection.GetDB()
+	user:=[]model.People{}
+	db.Find(&user)
+	a1,err:=json.Marshal(user)
+	if err!=nil{
+		panic(err)
+	}
+	w.Header().Set("Content-Type","application/json")
+	w.WriteHeader(http.StatusOK)
+	w.Write(a1)
+}
+
+
+func AllArticle(w http.ResponseWriter, r *http.Request){
+
+	db:=connection.GetDB()
+	article:=[]model.Article{}
+	db.Find(&article)
+	a1,err:=json.Marshal(article)
+	if err!=nil{
+		panic(err)
+	}
+	w.Header().Set("Content-Type","application/json")
+	w.WriteHeader(http.StatusOK)
+	w.Write(a1)
+
+
+}*/
